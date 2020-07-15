@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+
+    <title>México Historico</title>
+    <style>
+      #Table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #Table td, #Table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #Table tr:nth-child(even){background-color: #f2f2f2;}
+      #Table tr:nth-child(odd){background-color: white;}
+      
+      #Table tr:hover {background-color: #ddd;}
+      
+      #Table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #FE346E;
+        color: white;
+      }
+
+      .button {
+          background-color: #FE346E; /* Green */
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        }
+
+        .button1 {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #FE346E;
+        }
+
+        .button1:hover {
+          background-color: #FE346E;
+          color: white;
+        }
+        #mySidebar{
+          width: 950px;
+          display: table-cell;
+        }
+        #title2{
+          color: white;
+        }
+      </style>
+  </head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <body>
+    <div id="root">
+      
+
+      <div class="w3-sidebar w3-bar-block w3-animate-left w3-large" style="display:none;z-index:5" id="mySidebar" >
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <div id="hola" style="background-color: #333333;"></div>
+      </div>
+      <!-- Page Content -->
+      <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+      <div>
+        <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+        
+      </div>
+          
+      <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      </script>
+
+    </div>
+  </body>
+</html>
